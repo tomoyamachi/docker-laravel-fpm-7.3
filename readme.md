@@ -1,3 +1,22 @@
+# How to use
+
+```
+# Build laravel on php-fpm image
+docker builnd -t laravel-app . 
+
+# Build nginx image
+docker builnd -t laravel-nginx -f Dockerfile.nginx . 
+
+# Create bridge network
+docker network create laravel-test
+
+# Run on laravel-test network
+docker run --network laravel-test --name laravel laravel-app
+docker run --network laravel-test -p 80:80 laravel-nginx
+```
+
+===
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
