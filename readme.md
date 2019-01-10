@@ -1,6 +1,9 @@
 # How to use
 
 ```
+# Install laravel's packages
+docker run --rm --interactive --tty -v $(pwd):/app composer install
+
 # Build laravel on php-fpm image
 docker build -t laravel-app . 
 
@@ -14,6 +17,8 @@ docker network create laravel-test
 docker run --network laravel-test --name laravel laravel-app
 docker run --network laravel-test -p 80:80 laravel-nginx
 ```
+
+https://qiita.com/tomoyamachi/items/991a0d149e9585cac15f
 
 ===
 
