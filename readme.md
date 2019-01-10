@@ -2,10 +2,10 @@
 
 ```
 # Build laravel on php-fpm image
-docker builnd -t laravel-app . 
+docker build -t laravel-app . 
 
 # Build nginx image
-docker builnd -t laravel-nginx -f Dockerfile.nginx . 
+docker build -t laravel-nginx -f Dockerfile.nginx . 
 
 # Create bridge network
 docker network create laravel-test
