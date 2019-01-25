@@ -14,8 +14,8 @@ docker build -t laravel-nginx -f Dockerfile.nginx .
 docker network create laravel-test
 
 # Run on laravel-test network
-docker run --network laravel-test --name laravel laravel-app
-docker run --network laravel-test -p 80:80 laravel-nginx
+docker run -d --network laravel-test --name laravel laravel-app
+docker run -d --network laravel-test -p 80:80 laravel-nginx
 ```
 
 https://qiita.com/tomoyamachi/items/991a0d149e9585cac15f
