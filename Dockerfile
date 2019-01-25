@@ -16,6 +16,7 @@ RUN { \
   echo 'short_open_tag = On'; \
   echo 'fastcgi.logging = 1'; \
   echo 'opcache.enable=1'; \
+  echo 'opcache.optimization_level=0x7FFFBBFF' ; \
   echo 'opcache.revalidate_freq=0'; \
   echo 'opcache.validate_timestamps=1'; \
   echo 'opcache.memory_consumption=128'; \
@@ -23,7 +24,6 @@ RUN { \
   echo 'opcache.max_accelerated_files=4000'; \
   echo 'opcache.revalidate_freq=60'; \
   echo 'opcache.fast_shutdown=1'; \
-  # echo 'zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)'; \
   echo 'xdebug.remote_enable=1'; \
 } > /usr/local/etc/php/conf.d/overrides.ini
 
